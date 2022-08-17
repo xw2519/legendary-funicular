@@ -16,6 +16,7 @@ export default class Camera {
   createPerspectiveCamera() {
     this.prespectiveCamera = new THREE.PerspectiveCamera(35, this.sizes.aspect, 0.1, 1000)
     this.scene.add(this.prespectiveCamera)
+    this.prespectiveCamera.position.z = 5
   }
 
   createOrthographicCamera() {
