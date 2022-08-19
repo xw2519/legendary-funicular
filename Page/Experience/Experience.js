@@ -1,7 +1,9 @@
 import * as THREE from 'three'
 
+import assets from './Utils/assets'
 import Sizes from './Utils/Sizes'
 import Time from './Utils/Time'
+import Resources from './Utils/Resources'
 
 import Camera from './Camera'
 import Renderer from './Renderer'
@@ -21,9 +23,8 @@ export default class Experience {
     this.sizes = new Sizes()
     this.camera = new Camera()
     this.renderer = new Renderer()
+    this.resources = new Resources(assets)
     this.world = new World()
-
-    console.log(this.world)
 
     // Listens for events
     this.sizes.on('resize', () => {
